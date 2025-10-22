@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html, body, #root { height: 100%; }
+  ::selection { background: theme('colors.sea.200'); color: #063b3a; }
+}
+
+@layer components {
+  .card {
+    @apply rounded-xl bg-white shadow-card border border-sea-100;
+  }
+  .btn {
+    @apply inline-flex items-center justify-center rounded-lg px-4 py-2 text-sm font-medium transition focus:outline-none focus:ring-2 focus:ring-offset-2;
+  }
+  .btn-primary {
+    @apply btn bg-sea-700 text-white hover:bg-sea-800 focus:ring-sea-200;
+  }
+  .btn-secondary {
+    @apply btn bg-white border border-sea-200 text-sea-800 hover:bg-sea-50 focus:ring-sea-200;
+  }
+  .badge {
+    @apply inline-flex items-center gap-1 rounded-full bg-sea-100 text-sea-800 px-2 py-0.5 text-xs;
+  }
+  .input {
+    @apply w-full rounded-lg border border-sea-200 bg-white px-3 py-2 text-sm focus:ring-2 focus:ring-sea-200 outline-none;
+  }
+  .pill {
+    @apply rounded-full border border-sea-200 px-3 py-1 text-xs text-sea-800 bg-white hover:bg-sea-50;
+  }
+}
